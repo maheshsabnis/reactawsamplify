@@ -22,6 +22,7 @@ function App() {
          "Content-Type":"application/json"
        }
      }).then((resp)=>{
+       window.location.reload();
        console.log(JSON.stringify(resp.data.data));
        getProducts([...products,{
          ProdId: resp.data.data.ProdId,
